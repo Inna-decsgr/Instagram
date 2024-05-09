@@ -18,7 +18,7 @@ export default function UserSearch() {
     <section className='w-full max-w-2xl my-4 flex flex-col items-center'>
       <form className='w-full mb-4' onSubmit={onSubmit}>
         <input
-          className='w-full text-xl p-3 outline-none border border-gray-400 rounded-2xl'
+          className='w-full text-md p-3 outline-none border border-gray-400 rounded-2xl'
           type="text"
           autoFocus
           value={keyword}
