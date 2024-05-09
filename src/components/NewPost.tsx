@@ -79,6 +79,7 @@ export default function NewPost({ user: { username, image } }: Props) {
         error && <p className='w-full bg-red-100 text-red-600 text-center p-4 mb-4 font-bold'>{error}</p>
       }
       <PostUserAvatar username={username} image={image ?? ''} />
+      <h3 className='text-sm font-bold my-4'>새 게시물</h3>
       <form className='w-full flex flex-col mt-2' onSubmit={handleSubmit}>
         <input
           className='hidden'
@@ -116,11 +117,11 @@ export default function NewPost({ user: { username, image } }: Props) {
           )}
         </label>
         <textarea
-          className='outline-none text-lg border border-neutral-300 mb-4 p-2'
+          className='outline-none text-sm border border-neutral-300 mb-4 p-2'
           name="text"
           id="input-text"
           required
-          rows={10}
+          rows={8}
           placeholder={'문구를 작성하거나 설문을 추가하세요.'}
           ref={textRef}
         />

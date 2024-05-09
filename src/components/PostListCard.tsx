@@ -37,11 +37,11 @@ export default function PostListCard({ post, priority =false }: Props) {
         onClick={()=> setOpenModal(true)}
       />
       <ActionBar post={post} onComment={handlePostComment}>
-        <p><span className='font-bold mr-2'>{username}</span>
+        <p className='mb-1'><span className='font-bold mr-2'>{username}</span>
           {text}
         </p>
         {comments > 1 && (
-          <button className='text-sm text-gray-500 mt-1 mb-4' onClick={() => setOpenModal(true)}>
+          <button className='text-sm text-gray-500 mb-4' onClick={() => setOpenModal(true)}>
             {`댓글 ${comments}개 모두 보기`}
           </button>)
         }
