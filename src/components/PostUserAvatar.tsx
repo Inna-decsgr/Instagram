@@ -2,8 +2,8 @@ import React from 'react';
 import Avatar from './Avatar';
 
 type Props = {
-  image: string;
-  username: string;
+  image: string | undefined;
+  username?: string;
 }
 
 export default function PostUserAvatar({image, username}: Props) {
