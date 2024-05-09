@@ -38,7 +38,7 @@ function getImageSizeStyle(size: AvatarSize): ImageSizeStyle {
   switch (size) {
     case 'small':
       return {
-        container: 'w-9 h-9',
+        container: 'w-10 h-10',
         image: 'w-[34px] h-[34px] p-[0.1rem]'
       };
     case 'medium':

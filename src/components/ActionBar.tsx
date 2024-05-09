@@ -52,12 +52,14 @@ export default function ActionBar({ post, children, onComment }: Props) {
           offIcon={<BookmarkIcon />}
         />
       </div>
-      <div className='px-4 py-1'>
-        <p className='text-sm font-bold mb-2'>{`${likes?.length ?? 0} ${likes?.length > 1 ? 'likes' : 'like'}`}</p>
+      <div className='px-4'>
+        <p className='text-sm font-bold'>
+          {`좋아요 ${likes?.length ?? 0}개`}
+        </p>
         {children}
-        <p className='text-xs text-neutral-500 uppercase my-2'>{parseDate(createdAt)}</p>
+        <p className='text-xs text-neutral-500 uppercase mb-4'>{parseDate(createdAt)}</p>
       </div>
-      <CommentForm onPostComment={handleComment} />
+      <CommentForm onPostComment={handleComment} post={post} user={user} />
     </>
   );
 }

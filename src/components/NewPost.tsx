@@ -100,7 +100,7 @@ export default function NewPost({ user: { username, image } }: Props) {
           {!file && (
             <div className='flex flex-col items-center pointer-events-none'>
               <FileIcon />
-              <p>Drag and Drop your image here or click</p>
+              <p>여기에 이미지를 드래그하여 놓거나 클릭하세요</p>
           </div>
           )}
           {file && (
@@ -116,15 +116,15 @@ export default function NewPost({ user: { username, image } }: Props) {
           )}
         </label>
         <textarea
-          className='outline-none text-lg border border-neutral-300'
+          className='outline-none text-lg border border-neutral-300 mb-4 p-2'
           name="text"
           id="input-text"
           required
           rows={10}
-          placeholder={'Write a caption...'}
+          placeholder={'문구를 작성하거나 설문을 추가하세요.'}
           ref={textRef}
         />
-        <Button text='Publish' onClick={() => {}}/>
+        <Button text='공유' onClick={() => {}}/>
       </form>
     </section>
   );

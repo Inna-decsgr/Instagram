@@ -31,7 +31,7 @@ export default function UserPost({ user: {username} }: Props) {
             onClick={() => setQuery(type)}
           >
             <button className='scale-150 md:scale-100' aria-label={title}>{icon}</button>
-            <span className='hidden md:inline'>{type}</span>
+            <span className='hidden md:inline ml-1'>{type}</span>
           </li>
         ))}
       </ul>
