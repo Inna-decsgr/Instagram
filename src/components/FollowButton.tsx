@@ -22,7 +22,7 @@ export default function FollowButton({ user }: Props) {
   const showButton = loggedInUser && loggedInUser.username !== username;
   const following = loggedInUser && loggedInUser.following.find(item => item.username === username);
 
-  const text = following ? 'Unfollow' : 'Follow';
+  const text = following ? '팔로잉' : '팔로우';
 
   const handleFollow = async () => {
     setIsFetching(true);
@@ -44,7 +44,7 @@ export default function FollowButton({ user }: Props) {
             disabled={isUpdating}
             text={text}
             onClick={handleFollow}
-            red={text === 'Unfollow'}
+            red={text === '팔로잉'}
           />
         </div>
       )}
