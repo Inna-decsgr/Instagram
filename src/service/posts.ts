@@ -118,12 +118,12 @@ export async function createPost(userId: string, text: string, file: Blob) {
   .then((result) => {
     return client.create({
       _type: 'post',
-      author: {_ref: userId},
+      author: {_ref: userId, _type: 'reference'},
       photo: {asset: {_ref: result._id}},
       comments: [
         {
           comment: text,
-          author: {ref: userId, type:'reference'},
+          author: {_ref: userId, _type:'reference'},
         },
       ],
       likes: [],
